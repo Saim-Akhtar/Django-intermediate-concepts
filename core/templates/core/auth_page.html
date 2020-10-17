@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+
+{% block body %}
+
+    <h1>Auth page</h1>
+
+    {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+    <button><a href="{% url "core:logout" %}">Logout</a></button>
+  
+{% endblock body %}

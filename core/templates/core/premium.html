@@ -1,0 +1,9 @@
+{% extends "core/base.html" %}
+
+{% block body %}
+
+    <h1>Premium page</h1>
+    <button><a href="{% url "core:mail" %}">Send Email</a></button>
+    <button><a href="{% url "core:logout" %}">Logout</a></button>
+  
+{% endblock body %}
